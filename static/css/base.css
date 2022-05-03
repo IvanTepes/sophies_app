@@ -1,0 +1,178 @@
+html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin-top: calc(100vh - 90vh);
+    background-color: var(--main-blue);
+}
+
+/* -------------------------  Colors ------------------------- */
+
+:root {
+    /* Default light */
+    --sophies-red:#ef5244;
+    --sophies-blue:#12274a;
+    /* Dark mode */
+    --main-red: #ef5244;
+    --main-blue: #12274a;
+    --main-black: #212529;
+}
+
+.header-container {
+    /* padding-right: 0px;
+    padding-left: 0px; */
+    width: 70%;
+}
+
+.logo-image {
+    width: 50%;
+    height: auto;
+}
+
+.bottom-container {
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    background-color: var(--main-blue);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background: linear-gradient(45deg, #132a4f, #102343);
+    box-shadow:  5px -5px 10px #07101e,
+                -5px 5px 10px #1d3e76;
+    border-top: 1px solid #5d5a59;
+}
+
+.bottom_menu {
+    height: 8vh;
+    padding-top: 0.5rem;
+    margin-bottom: 7vh;
+}
+
+
+/* -------------------------  Navigation bar ------------------------- */
+
+
+.navbar {
+    background-color: var(--main-blue);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    /* box-shadow: 0px 5px 10px 4px #15191f; */
+    border-bottom: 1px solid #5d5a59;
+    background: linear-gradient(145deg, #132a4f, #102343);
+    box-shadow:  5px 5px 10px #07101e,
+             -5px -5px 10px #1d3e76;
+}
+
+/* To remove margin from image */
+.navbar-brand {
+    margin-right: 0px;
+}
+
+/* Position logo image and buttons, reducing width of fluid container */
+.nav-container {
+    width: 90%;
+}
+
+/* To position logo image in middle */
+.navbar > .container-fluid {
+    justify-content: center;
+}
+
+/* Hamburger toggler icon color */
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 87, 51)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Toggler on focus when pressed */
+.navbar-toggler:focus {
+    text-decoration: none;
+    box-shadow: 0 0 0 0.25rem;
+    color: var(--main-red);
+}
+
+
+/* -------------------------  Cards ------------------------- */
+
+/* To position odd card in middle  */
+.content-container > .row {
+    justify-content: space-around;
+
+}
+
+/* Card background color */
+.card {
+
+    /* ---------------- Option 1 first design ---  BEGGINING ---*/
+
+    /* background-color: #212529;
+    border: 1px solid #5d5a59;
+    box-shadow: 0px 0px 10px 4px #121419;
+    border-radius: 30px; */
+
+    /* ---------------- Option 1 first design ---  END ---*/
+
+    /* ---------------- Option 2 Neumorphism  ---  BEGGININGS ---*/
+    /* Sharper edges , edged out */
+
+    /* border-radius: 30px;
+    background: linear-gradient(45deg, #23282c, #1e2125);
+    box-shadow:  5px -5px 10px #121417,
+                -5px 5px 10px #30363b; */
+
+    /* ---------------- Option 2 Neumorphism  ---  END ---*/
+
+    /* ---------------- Option 3 Neumorphism with border  ---  BEGGININGS ---*/
+    /* Sharper edges , edged out , border*/
+
+    /* border: 1px solid #5d5a59;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #23282c, #1e2125);
+    box-shadow:  5px -5px 10px #121417,
+                -5px 5px 10px #30363b; */
+
+    /* ---------------- Option 3 Neumorphism with border ---  END ---*/
+
+    /* ---------------- Option 4 Neumorphism  ---  BEGGININGS ---*/
+    /* Sharp edges , edged out*/
+
+    /* border-radius: 30px;
+    background: linear-gradient(45deg, #23282c, #1e2125);
+    box-shadow:  5px -5px 7px #0d0f10,
+                -5px 5px 7px #353b42; */
+
+    /* ---------------- Option 4 Neumorphism ---  END ---*/
+
+
+    /* ---------------- Option 5 Neumorphism blue back ---  BEGGININGS ---*/
+    /* Sharp edges , edged out*/
+
+    /* border: 1px solid #5d5a59; */
+    border-radius: 30px;
+    background: linear-gradient(145deg, #132a4f, #102343);
+    box-shadow:  5px 5px 10px #07101e,
+                -5px -5px 10px #1d3e76;
+
+    /* ---------------- Option 5 Neumorphism blue back ---  END ---*/
+
+}
+
+/* Card title color */
+.card-title {
+    color: white;
+}
+
+/* To make more space around cards */
+.card-container {
+    padding: 2vh;
+    width: 24vh;
+}
+
+/* Image size and padding to center image in middle */
+.card-img-top {
+    height: 10vh;
+    padding-top: 1rem;
+}
