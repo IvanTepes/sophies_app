@@ -1,36 +1,67 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg  static-top">
-    <div class="container-fluid nav-container">
-      <a class="navbar-brand" href="#">
-        <img src="media/logo/logo_big.svg" alt="..." height="36">
-      </a>
-      <!-- <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-          </li> -->
-          <!-- <button type="button" class="btn btn-primary">Log in</button> -->
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
-        <!-- </ul> -->
-      </div>
-    </div>
-  </nav>
 
+<!--   This code is taken from Codepen
+
+  All credit go to autor,
+
+  Code is refactored to fit the project purpose
+
+  https://codepen.io/melnik909/pen/JpJPYp
+
+-->
+
+<div class="container menu-container">
+    <div class="page">
+        <div class="menu">
+            <nav class="menu__nav">
+                <ul class="menu__list r-list">
+                    <li class="menu__group">
+                        <!-- <input type="checkbox" id="toggle"> -->
+                        <div class="container">
+                            <div class="switch-holder">
+                                <div class="switch-label">
+                                </div>
+                                <div class="switch-toggle">
+                                    <input type="checkbox" id="bluetooth">
+                                    <label for="bluetooth"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Home</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Duties</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Cleaning</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Preparation</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Recipes</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Pizzas</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Desserts</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Dough Recipe</a>
+                    </li>
+                    <li class="menu__group">
+                        <a href="#0" class="menu__link r-link">Dough Statistic</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="menu__toggle r-button" type="button">
+                <span class="menu__hamburger m-hamburger">
+                    <span class="m-hamburger__label">
+                        <span class="menu__toggle-hint screen-reader">Open menu</span>
+                    </span>
+                </span>
+            </button>
+        </div>
+    </div>
