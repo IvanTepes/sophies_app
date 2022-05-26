@@ -4,175 +4,133 @@ html {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+
 body {
-    height: 100vh;
-    margin-top: calc(100vh - 90vh);
-    background-color: var(--main-blue);
+    height: 75vh;
+    margin-top: calc(100vh - 92vh);
+    background-color: var(--bg-color);
+    padding: 1rem;
 }
 
-/* -------------------------  Colors ------------------------- */
 
 :root {
-    /* Default light */
-    --sophies-red:#ef5244;
-    --sophies-blue:#12274a;
-    /* Dark mode */
-    --main-red: #ef5244;
-    --main-blue: #12274a;
-    --main-black: #212529;
+    /* Default app color */
+    --app-orange:#ef5244;
+    --app-blue:#12274a;
+    --text-color:#12274a;
+    --bg-color: #e0e0e0;
+    --bg-shadow: 5px 5px 10px #b3b3b3,
+                -5px -5px 10px #ffffff;
+    --border: 1px solid #eaeaea;
 }
 
-.header-container {
-    /* padding-right: 0px;
-    padding-left: 0px; */
-    width: 70%;
+
+:root .dark-theme {
+    --sophies-orange:#ef5244;
+    --sophies-blue:#12274a;
+    --text-color: white;
+    --bg-color: #12274a;
+    --bg-shadow: 5px 5px 10px #0a1324,
+    -5px -5px 10px #264b8e;
 }
+
+
+/* -------------------------  Grid  ------------------------- */
+
+
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 3rem;
+}
+
+
+.grid-item {
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    /* background: var(--bg-color); */
+    box-shadow: var(--bg-shadow);
+    /* border: var(--border); */
+    border-radius: 20px;
+    height: 5.5rem;
+}
+
+
+/* -------------------------  Grid END ------------------------- */
+
 
 .logo-image {
     width: 50%;
     height: auto;
 }
 
+
 .bottom-container {
     position: fixed;
     bottom: 0;
     height: 10vh;
-    background-color: var(--main-blue);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    background: linear-gradient(45deg, #132a4f, #102343);
-    box-shadow:  5px -5px 10px #07101e,
-                -5px 5px 10px #1d3e76;
-    border-top: 1px solid #5d5a59;
-}
-
-.bottom_menu {
-    height: 8vh;
-    padding-top: 0.5rem;
-    margin-bottom: 7vh;
+    background-color: var(--bg-color);
 }
 
 
 /* -------------------------  Navigation bar ------------------------- */
 
 
-.navbar {
-    background-color: var(--main-blue);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    /* box-shadow: 0px 5px 10px 4px #15191f; */
-    border-bottom: 1px solid #5d5a59;
-    background: linear-gradient(145deg, #132a4f, #102343);
-    box-shadow:  5px 5px 10px #07101e,
-             -5px -5px 10px #1d3e76;
+#logo {
+    height: 3rem;
+    margin-top: 1.5rem;
 }
 
-/* To remove margin from image */
-.navbar-brand {
-    margin-right: 0px;
-}
 
-/* Position logo image and buttons, reducing width of fluid container */
-.nav-container {
-    width: 90%;
-}
-
-/* To position logo image in middle */
-.navbar > .container-fluid {
-    justify-content: center;
-}
-
-/* Hamburger toggler icon color */
-.navbar-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 87, 51)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Toggler on focus when pressed */
-.navbar-toggler:focus {
-    text-decoration: none;
-    box-shadow: 0 0 0 0.25rem;
-    color: var(--main-red);
+.brand {
+    margin-left: 1rem;
 }
 
 
 /* -------------------------  Cards ------------------------- */
 
-/* To position odd card in middle  */
-.content-container > .row {
-    justify-content: space-around;
 
+/* To override default padding and margin from row */
+.row > * {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
 }
 
-/* Card background color */
-.card {
 
-    /* ---------------- Option 1 first design ---  BEGGINING ---*/
-
-    /* background-color: #212529;
-    border: 1px solid #5d5a59;
-    box-shadow: 0px 0px 10px 4px #121419;
-    border-radius: 30px; */
-
-    /* ---------------- Option 1 first design ---  END ---*/
-
-    /* ---------------- Option 2 Neumorphism  ---  BEGGININGS ---*/
-    /* Sharper edges , edged out */
-
-    /* border-radius: 30px;
-    background: linear-gradient(45deg, #23282c, #1e2125);
-    box-shadow:  5px -5px 10px #121417,
-                -5px 5px 10px #30363b; */
-
-    /* ---------------- Option 2 Neumorphism  ---  END ---*/
-
-    /* ---------------- Option 3 Neumorphism with border  ---  BEGGININGS ---*/
-    /* Sharper edges , edged out , border*/
-
-    /* border: 1px solid #5d5a59;
-    border-radius: 30px;
-    background: linear-gradient(45deg, #23282c, #1e2125);
-    box-shadow:  5px -5px 10px #121417,
-                -5px 5px 10px #30363b; */
-
-    /* ---------------- Option 3 Neumorphism with border ---  END ---*/
-
-    /* ---------------- Option 4 Neumorphism  ---  BEGGININGS ---*/
-    /* Sharp edges , edged out*/
-
-    /* border-radius: 30px;
-    background: linear-gradient(45deg, #23282c, #1e2125);
-    box-shadow:  5px -5px 7px #0d0f10,
-                -5px 5px 7px #353b42; */
-
-    /* ---------------- Option 4 Neumorphism ---  END ---*/
-
-
-    /* ---------------- Option 5 Neumorphism blue back ---  BEGGININGS ---*/
-    /* Sharp edges , edged out*/
-
-    /* border: 1px solid #5d5a59; */
-    border-radius: 30px;
-    background: linear-gradient(145deg, #132a4f, #102343);
-    box-shadow:  5px 5px 10px #07101e,
-                -5px -5px 10px #1d3e76;
-
-    /* ---------------- Option 5 Neumorphism blue back ---  END ---*/
-
-}
-
-/* Card title color */
 .card-title {
-    color: white;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
-/* To make more space around cards */
-.card-container {
-    padding: 2vh;
-    width: 24vh;
-}
 
 /* Image size and padding to center image in middle */
 .card-img-top {
-    height: 10vh;
-    padding-top: 1rem;
+    height: 7vh;
+    padding-top: 0.5rem;
 }
+
+
+/* -------------------------  Cards END ------------------------- */
+
+
+/* ------------------------- Media Queries ------------------------- */
+
+
+@media (min-width: 300px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+@media (min-width: 600px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+@media (min-width: 900px) {
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/* ------------------------- Media Queries END ------------------------- */
+
