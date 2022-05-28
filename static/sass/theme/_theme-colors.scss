@@ -1,0 +1,75 @@
+
+
+// ------------- LIGHT THEME  -------------
+
+
+html[data-theme="light"] {
+
+    --color-white: #{$color-white};
+
+    --app-orange: #{$app-orange};
+    --app-blue:#{$app-blue};
+
+    --text-color:#{$text-color};
+    --text-shadow: #{$text-shadow};
+
+    --bg-color: #{$bg-color};
+    --bg-shadow: #{$bg-shadow};
+
+    --border: #{$border};
+    --border-color: #{$border-color};
+
+    --bg-grid-card: #{$bg-grid-card};
+
+    --btn-toggle-switch-bg: #{$btn-toggle-switch-bg};
+    --btn-toggle-switch-shadow: #{$btn-toggle-switch-shadow};
+
+    --input-toggle-shadow: #{$input-toggle-shadow};
+
+    --menu-toggle-bg: #{$menu-toggle-bg};
+    --menu-toggle-shadow: #{$menu-toggle-shadow};
+
+    --menu-item-text-shadow: #{$menu-item-text-shadow};
+    --menu-item-shadow: #{$menu-item-shadow};
+    --menu-item-hover-shadow: #{$menu-item-hover-shadow};
+    --menu-item-hover-text-shadow: #{$menu-item-hover-text-shadow};
+    --menu-item-hover-text-bg: #{$menu-item-hover-text-bg};
+}
+
+
+// ------------- DARK THEME  -------------
+
+
+html[data-theme="dark"] {
+
+    --color-white: #{$color-white-dark};
+
+    --app-orange: #{$app-orange};
+    --app-blue:#{$app-blue};
+
+    --text-color:#{$text-color-dark};
+    --text-shadow: #{$text-shadow-dark};
+
+    --bg-color: #{$bg-color-dark};
+    --bg-shadow: #{$bg-shadow-dark};
+
+    --border: #{$border-dark};
+    --border-color: #{$border-color-dark};
+
+    --bg-grid-card: #{$bg-grid-card-dark};
+
+    --btn-toggle-switch-bg: #{$btn-toggle-switch-bg-dark};
+    --btn-toggle-switch-shadow: #{$btn-toggle-switch-shadow-dark};
+
+    --input-toggle-shadow: #{$input-toggle-shadow-dark};
+
+    --menu-toggle-bg: #{$menu-toggle-bg-dark};
+    --menu-toggle-shadow: #{$menu-toggle-shadow-dark};
+
+    --menu-item-text-shadow: #{$menu-item-text-shadow-dark};
+    --menu-item-shadow: #{$menu-item-shadow-dark};
+
+    --menu-item-hover-shadow: #{$menu-item-hover-shadow-dark};
+    --menu-item-hover-text-shadow: #{$menu-item-hover-text-shadow-dark};
+    --menu-item-hover-text-bg: #{$menu-item-hover-text-bg-dark};
+}

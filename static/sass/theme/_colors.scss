@@ -1,0 +1,87 @@
+
+
+// -------------  LIGHT COLORS -------------
+
+$app-orange: #e46e4c;
+$app-blue:#12274a;
+
+$color-white: #fff;
+
+$text-color: #12274a;
+$text-shadow: -1px -1px 2px #fff,
+              1px 1px 2px #c2c2c2;
+
+$bg-color: #e6e7ee;
+$bg-shadow: 3px 3px 6px #b8b9be,
+           -3px -3px 6px #fff;
+
+$border: 0.0625rem solid transparent;
+$border-color: #d1d9e6;
+
+$bg-grid-card: #f6f7ff, #cfd0d6;
+
+$btn-toggle-switch-bg: #f47651, #cd6344;
+$btn-toggle-switch-shadow: 5px 5px 11px #60211b,
+                          -2px -2px 11px #ff836d;
+
+$input-toggle-shadow: inset 5px 5px 15px #5b2c1e,
+                      inset -1px 1px 14px #ffb07a;
+
+$menu-toggle-bg: #ff5849, #d74a3d;
+$menu-toggle-shadow: inset 5px 5px 14px #5b2c1e,
+                     inset -5px -5px 14px #ffb07a;
+
+$menu-item-text-shadow: 2px -2px 8px #2b1a13,
+                       -2px 2px 8px #2b1a13;
+$menu-item-shadow: 2px 2px 11px #592a1d,
+                  -2px -2px 11px #ffaa73;
+
+$menu-item-hover-shadow: inset 5px 5px 8px #5b2c1e,
+                         inset -5px -5px 8px #ffb07a;
+$menu-item-hover-text-shadow: 3px -3px 8px #ed9c6c,
+                             -3px 3px 8px #703726;
+$menu-item-hover-text-bg: #12274a;
+
+
+// ------------- DARK COLORS -------------
+
+$app-orange: #e46e4c;
+$app-blue:#12274a;
+
+$color-white-dark: #fff;
+
+$text-color-dark: #fff;
+$text-shadow-dark: -1px -1px 2px #fff,
+                   1px 1px 2px #c2c2c2;
+
+$bg-color-dark: #12274a;
+$bg-shadow-dark: 5px 5px 10px #0a1324,
+                -5px -5px 10px #264b8e;
+
+$border-dark: 0.5px solid #224580;
+$border-color-dark: #d1d9e6;
+
+$bg-grid-card-dark: #12274a, #12274a;
+
+$btn-toggle-switch-bg-dark: #f47651, #cd6344;
+$btn-toggle-switch-shadow-dark: 5px 5px 11px #60211b,
+                               -2px -2px 11px #ff836d;
+
+$input-toggle-shadow-dark: inset 5px 5px 15px #5b2c1e,
+                           inset -1px 1px 14px #ffb07a;
+
+$menu-toggle-bg-dark: #ff5849, #d74a3d;
+$menu-toggle-shadow-dark: inset 5px 5px 14px #5b2c1e,
+                          inset -5px -5px 14px #ffb07a;
+
+$menu-item-text-shadow-dark: 2px -2px 8px #2b1a13,
+                            -2px 2px 8px #2b1a13;
+$menu-item-shadow-dark: 2px 2px 11px #592a1d,
+                       -2px -2px 11px #ffaa73;
+
+$menu-item-hover-shadow-dark: inset 5px 5px 8px #5b2c1e,
+                              inset -5px -5px 8px #ffb07a;
+$menu-item-hover-text-shadow-dark: 3px -3px 8px #ed9c6c,
+                                  -3px 3px 8px #703726;
+$menu-item-hover-text-bg-dark: #12274a;
+

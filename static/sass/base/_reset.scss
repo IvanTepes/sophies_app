@@ -1,0 +1,12 @@
+html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    height: 75vh;
+    margin-top: calc(100vh - 92vh);
+    background: var(--bg-color);
+    padding: 1rem;
+}
