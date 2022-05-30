@@ -5,21 +5,22 @@
 
 html[data-theme="light"] {
 
+    --theme-color: #{$theme-color};
+
     --color-white: #{$color-white};
 
-    --app-orange: #{$app-orange};
-    --app-blue:#{$app-blue};
+    --brand-primary: #{$brand-primary};
+    --brand-secondary:#{$brand-secondary};
 
-    --text-color:#{$text-color};
-    --text-shadow: #{$text-shadow};
+    --body-shadow: #{$body-shadow};
 
-    --bg-color: #{$bg-color};
-    --bg-shadow: #{$bg-shadow};
+    --btn-bg: #{$btn-bg};
+    --btn-shadow: #{$btn-shadow};
 
-    --border: #{$border};
-    --border-color: #{$border-color};
+    --title-color: #{$title-color};
+    --card-icon-shadow: #{$card-icon-shadow};
 
-    --bg-grid-card: #{$bg-grid-card};
+
 
     --btn-toggle-switch-bg: #{$btn-toggle-switch-bg};
     --btn-toggle-switch-shadow: #{$btn-toggle-switch-shadow};
@@ -44,8 +45,8 @@ html[data-theme="dark"] {
 
     --color-white: #{$color-white-dark};
 
-    --app-orange: #{$app-orange};
-    --app-blue:#{$app-blue};
+    --brand-primary: #{$brand-primary};
+    --brand-secondary:#{$brand-secondary};
 
     --text-color:#{$text-color-dark};
     --text-shadow: #{$text-shadow-dark};
