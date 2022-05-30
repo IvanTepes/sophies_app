@@ -2,23 +2,31 @@
 
 // -------------  LIGHT COLORS -------------
 
-$app-orange: #e46e4c;
-$app-blue:#12274a;
+$theme-color: #e6e7ee;
+
+$text-color: #6b728d;
 
 $color-white: #fff;
 
-$text-color: #12274a;
-$text-shadow: -1px -1px 2px #fff,
-              1px 1px 2px #c2c2c2;
+$brand-primary:#032D48;
+$brand-secondary: #EF5244;
 
-$bg-color: #e6e7ee;
-$bg-shadow: 3px 3px 6px #b8b9be,
-           -3px -3px 6px #fff;
 
-$border: 0.0625rem solid transparent;
-$border-color: #d1d9e6;
+$body-shadow: inset rgb(104 139 255 / 10%) 0px 48px 100px 0px,
+              inset rgb(17 12 46 / 15%) 0px 30px 100px 0px;
 
-$bg-grid-card: #f6f7ff, #cfd0d6;
+$btn-bg: rgba(255,255,255,.1) 0%,
+         rgba(255,255,255,.6) 50%,
+         rgba(255,255,255,.1) 100%;
+
+$btn-shadow: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
+                                 rgb(104 139 255 / 10%) 7px 3px 10px,
+                                 rgb(0 0 0 / 10%) 7px 5px 10px;
+
+
+$title-color: #6b728d;
+$card-icon-shadow:#6b728d;
+
 
 $btn-toggle-switch-bg: #f47651, #cd6344;
 $btn-toggle-switch-shadow: 5px 5px 11px #60211b,
@@ -45,10 +53,10 @@ $menu-item-hover-text-bg: #12274a;
 
 // ------------- DARK COLORS -------------
 
-$app-orange: #e46e4c;
-$app-blue:#12274a;
+$app-orange: #EF5244;
+$app-blue:#032D48;
 
-$color-white-dark: #fff;
+$color-white-dark: #032D48;
 
 $text-color-dark: #fff;
 $text-shadow-dark: -1px -1px 2px #fff,
