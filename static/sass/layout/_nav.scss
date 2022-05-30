@@ -1,430 +1,190 @@
-/* The component will reset button browser styles */
-.r-button{
-    --uirButtonBackgroundColor: var(--rButtonBackgroundColor, transparent);
-    --uirButtonPadding: var(--rButtonPadding, var(--rButtonPaddingTop, 0) var(--rButtonPaddingRight, 0) var(--rButtonPaddingBottom, 0) var(--rButtonPaddingLeft, 0));
-    --uirButtonBorderWidth: var(--rButtonBorderWidth, 0);
-    --uirButtonBorderStyle: var(--rButtonBorderStyle, solid);
-    --uirButtonBorderColor: var(--rButtonBorderColor, currentColor);
-    --uirButtonFontFamily: var(--rButtonFontFamily, inherit);
-    --uirButtonFontSize: var(--rButtonFontSize,  inherit);
-    --uirButtonColor: var(--rButtonColor);
 
-    background-color: var(--uirButtonBackgroundColor);
-    padding: var(--uirButtonPadding);
 
-    border-width: var(--uirButtonBorderWidth);
-    border-style: var(--uirButtonBorderStyle);
-    border-color: var(--uirButtonBorderColor);
+#navbar-checkbox:checked ~ .nav-menu {
+  clip-path: circle(75%);
+  z-index: 1050;
+}
 
-    cursor: pointer;
 
-    font-family: var(--uirButtonFontFamily);
-    font-size: var(--uirButtonFontSize);
-  }
+.nav-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 
+  height: 100%;
+  width: 100%;
 
-  .r-button::-moz-focus-inner,
-  .r-button[type="button"]::-moz-focus-inner,
-  .r-button[type="reset"]::-moz-focus-inner,
-  .r-button[type="submit"]::-moz-focus-inner {
+  background: var(--theme-color);
 
-    /* Remove the inner border and padding in Firefox. */
+  -webkit-clip-path: circle(25px at calc(100% - 45px) 45px);
+  clip-path: circle(25px at calc(100% - 50%) 100%);
+  transition: all 0.3s ease-in-out;
+}
 
-    border-style: none;
-    padding: 0;
-  }
 
+.nav-btn{
+  position: fixed;
+  z-index: 2000;
 
-  /* The component will reset browser's styles of link */
-  .r-link{
-      --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
-      --uirLinkTextColor: var(--rLinkTextColor);
-      --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
+  left: 50%;
+  bottom: -25px;
+  margin: 0 auto;
 
-      display: var(--uirLinkDisplay) !important;
-      color: var(--uirLinkTextColor) !important;
-      text-decoration: var(--uirLinkTextDecoration) !important;
+  height: 50px;
+  width: 100px;
 
-      border-radius: 10px;
+  text-align: center;
+  line-height: 57px;
+  font-size: 30px;
 
-      padding: 5px;
+  background: var(--theme-color);
+  box-shadow: var(--btn-shadow);
 
-      background: linear-gradient(145deg, #c85f41, #ee714d);
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
 
-      box-shadow: var(--menu-item-shadow);
-      text-shadow: var(--menu-item-text-shadow);
+  transform: translate(-50%, -50%);
 
-      width: 90%;
-      justify-content: center;
-      letter-spacing: 2px;
-  }
+  cursor: pointer;
 
+  transition: all 0.3s ease-in-out;
+}
 
-  .r-link:hover{
-    background: var(--app-primary);
-    box-shadow: var(--menu-item-hover-shadow);
-    color: var(--menu-item-hover-text-bg) !important;
-    text-shadow: var(--menu-item-hover-text-shadow);
-  }
 
-  /* The component will reset browser's styles of list */
-  .r-list{
-      --uirListPaddingLeft: var(--rListPaddingLeft, 0);
-      --uirListMarginTop: var(--rListMarginTop, 0);
-      --uirListMarginBottom: var(--rListMarginBottom, 0);
-      --uirListListStyle: var(--rListListStyle, none);
+/* Color after nav btn is pressed */
+#navbar-checkbox:checked ~ .nav-btn{
+  color: black;
+}
 
-      padding-left: var(--uirListPaddingLeft) !important;
-      margin-top: var(--uirListMarginTop) !important;
-      /* margin-bottom: var(--uirListMarginBottom) !important; */
-      list-style: var(--uirListListStyle) !important;
 
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-  }
+/* Navbar icon and color */
+#navbar-checkbox:checked ~ .nav-btn__icon:before{
+  content: "\f00d";
+  color: var(--title-color);
+}
 
 
-  /* Basic styles of the hamburger component */
-  .m-hamburger{
-    --uiHamburgerThickness: var(--hamburgerThickness, 4px);
+.nav-menu__list {
+  position: absolute;
+  top: 45%;
+  left: 50%;
 
-    display: var(--hamburgerDisplay, inline-flex);
-    width: var(--hamburgerWidth, 28px);
-    height: var(--hamburgerHeight, 20px);
+  width: 80%;
+  padding: 0;
 
-    position: relative;
-  }
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
 
 
-  .m-hamburger::before,
-  .m-hamburger::after,
-  .m-hamburger__label{
-    width: 100%;
-    height: var(--uiHamburgerThickness);
-    border-radius: var(--hamburgerBorderRadius, 5px);
-    background-color: var(--bg-color);
+.nav-menu__list--item {
+  margin: 15px 0;
 
-    position: absolute;
-    left: 0;
-  }
+  border-radius: 20px;
 
+  background: var(--theme-color);
+  box-shadow: var(--btn-shadow);
+  /* text-shadow: var(--menu-item-text-shadow); */
+}
 
-  .m-hamburger::before,
-  .m-hamburger::after{
-    content:"";
-  }
 
+.nav-menu__list--item:hover {
+  box-shadow: inset 6px 6px 10px 0 rgb(0 0 0 / 20%);
+}
 
-  .m-hamburger::before{
-    top: 0;
-  }
+.nav-menu__list--item:first-child {
+  background: none;
+  box-shadow: none;
+}
 
 
-  .m-hamburger::after{
-    bottom: 0;
-  }
+.nav-menu__list--item--title {
+  position: relative;
+  padding: 5px 30px;
 
+  color: var(--title-color);
 
-  .m-hamburger__label{
-    /* The calculation of middle hamburger button line position */
-    top: calc(50% - calc(var(--uiHamburgerThickness) / 2));
-  }
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
 
+  transition: all 0.3s ease;
+}
 
-  /* helper to hide elements that are available only for screen readers. */
-  .screen-reader{
-    width: var(--screenReaderWidth, 1px) !important;
-    height: var(--screenReaderHeight, 1px) !important;
-    padding: var(--screenReaderPadding, 0) !important;
-    border: var(--screenReaderBorder, none) !important;
 
-    position: var(--screenReaderPosition, absolute) !important;
-    clip: var(--screenReaderClip, rect(1px, 1px, 1px, 1px)) !important;
-    overflow: var(--screenReaderOverflow, hidden) !important;
-  }
+.nav-menu__list--item--title:after {
+  position: absolute;
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%; /* if the font is 'Oswald'*/
 
+  content: "";
 
-/* ------------------------- Menu ----------------- */
+  border-radius: 50px;
 
+  z-index: -1;
 
-  .menu{
-    --uiMenuCircleSize: var(--menuCircleSize, 6.25rem);
-    --uiMenuCircleOffset: var(--menuCircleOffset, 1rem);
-    --uiMenuCircleHeight: calc(var(--uiMenuCircleSize) / 2);
-    --uiMenuCircleBackgroundColor: var(--menuCircleBackgroundColor, currentColor);
+  transform: scaleY(0);
 
-    --uiMenuHamburgerWidth: var(--menuHamburgerWidth, 1.75rem);
-    --uiMenuHamburgerHeight: var(--menuHamburgerHeight, 1.25rem);
+  transition: transform 0.2s ease;
+}
 
-    --rButtonPaddingTop: calc(var(--uiMenuCircleHeight) - var(--uiMenuHamburgerHeight) - var(--uiMenuCircleOffset));
 
-    --hamburgerWidth: var(--uiMenuHamburgerWidth);
-    --hamburgerHeight: var(--uiMenuHamburgerHeight);
-    --hamburgerBackgroundColor: var(--menuHamburgerBackgroundColor, var(--bg-color));
+.nav-menu__list--item--title:hover:after{
+  transform: scaleY(1);
+}
 
-    width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.nav-menu__list--item--title:hover{
+  color: #fff;
+}
 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: var(--menuZindex, 1100);
-  }
 
+input[type="checkbox"]{
+  display: none;
+}
 
-  .menu__nav{
-    box-sizing: border-box;
-    width: 100%;
-    height: 0;
 
-    transition: opacity .2s ease-out;
-    opacity: 0;
+/* ------------------------- Toggle Switch ----------------- */
 
-    display: flex;
-    align-items: center;
-    z-index: 2;
-  }
 
-
-  .menu__list{
-    width: 100%;
-    max-height: 100%;
-
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-
-  .menu__toggle{
-    box-sizing: border-box;
-    width: var(--uiMenuCircleSize);
-    height: var(--uiMenuCircleHeight);
-    flex: none;
-
-    position: relative;
-  }
-
-
-  .menu__toggle::before{
-    /*
-    1. The font-size property is used to simplify calculations of the element's sizes and position
-    2. The negative value for the bottom property need for hiding half of circle.
-    */
-    content: "";
-    width: 1em;
-    height: 1em;
-    font-size: var(--uiMenuCircleSize); /* 1 */
-
-    background: var(--app-primary);
-
-    border-radius: 50%;
-    border: 0.0625rem solid transparent;
-    border-color: var(--border-color);
-
-    box-shadow: var(--menu-toggle-shadow);
-
-    position: absolute;
-    bottom: -.5em; /* 2 */
-    left: calc(50% - .5em);
-    z-index: -1;
-
-    will-change: width, height;
-    transition: transform .25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
-                width .25s cubic-bezier(0.04, -0.1, 0.29, 0.98),
-                height .25s cubic-bezier(0.04, -0.1, 0.29, 0.98);
-  }
-
-
-  /* styles of hamburger's animation */
-  .m-hamburger::before,
-  .m-hamburger::after,
-  .m-hamburger__label{
-    transition-timing-function: ease;
-    transition-duration: .15s;
-  }
-
-
-  .m-hamburger::before,
-  .m-hamburger::after{
-    transition-property: transform;
-  }
-
-
-  .m-hamburger__label{
-    transition-property: transform, opacity;
-  }
-
-
-/* ------------------------- Menu States ----------------- */
-
-
-  .menu__toggle:focus{
-    outline: var(--menuHaburgerOutlineOWidth, 2px) solid var(--menuHaburgerOutlineColor);
-    outline-offset: var(--menuHaburgerOutlineOffset, 5px);
-  }
-
-
-  .menu_activated{
-    height: 100%;
-  }
-
-
-  .menu_activated .menu__nav{
-    flex-grow: 1;
-    opacity: 1;
-
-    will-change: opacity;
-    transition-duration: .2s;
-    transition-delay: .3s;
-  }
-
-
-  .menu_activated .menu__toggle::before{
-    width: 100vmax;
-    height: 100vmax;
-    transform: translate3d(-50vh, -50vh, 0) scale(5);
-    transition-duration: 1s;
-  }
-
-
-  .menu:not(.menu_activated) .menu__list{
-    display: none;
-  }
-
-
-  .menu_activated .m-hamburger::before{
-    top: 50%;
-    transform: translate3d(0, -50%, 0) rotate(45deg);
-  }
-
-
-  .menu_activated .m-hamburger::after{
-    transform: translate3d(0, -50%, 0) rotate(135deg);
-    top: 50%;
-  }
-
-
-  .menu_activated .m-hamburger__label{
-    transform: rotate(-45deg) translate3d(-.285em,-.3em, 0);
-    opacity: 0;
-  }
-
-
-  .menu_activated{
-    --menuHaburgerOutlineColor: var(--color-white);
-  }
-
-
-
- /* ------------------------- Settings ----------------- */
-
-  .page{
-    max-width: 380px;
-    padding: 1rem;
-    margin: auto;
-    text-align: center;
-  }
-
-
-  .page__name{
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-
-  .page__hint{
-    display: block;
-    line-height: 1.45;
-    margin-top: 1rem;
-  }
-
-
-  .menu__group{
-    --rLinkTextColor: var(--color-white);
-
-    padding: .5rem 2rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-
-  .linktr{
-    order: -1;
-    padding: 1.75rem;
-    text-align: center;
-  }
-
-
-  .linktr__goal{
-    background-color: rgb(209, 246, 255);
-    color: rgb(8, 49, 112);
-    box-shadow: rgb(8 49 112 / 24%) 0px 2px 8px 0px;
-    border-radius: 2rem;
-    padding: .5rem 1.25rem;
-  }
-
-
-  @media (min-width: 1024px){
-
-    .linktr{
-      position: absolute;
-      right: 1rem;
-      bottom: 1rem;
-    }
-  }
-
-
-  /* ------------------------- Toggle Switch ----------------- */
-
-
-.switch-holder{
+.nav-menu__theme-switch {
   align-items: center;
   justify-content:space-between;
   border-radius: 10px;
 }
 
 
-.switch-label{
-   width:150px;
-}
-
-
-.switch-label i{
-   margin-right:5px;
-}
-
-
-.switch-toggle{
-   height:40px;
-}
-
-
-.switch-toggle input[type="checkbox"]{
+.nav-menu__theme-switch--btn input[type="checkbox"] {
    position: absolute;
    opacity: 0;
    z-index: -2;
 }
 
 
-.switch-toggle input[type="checkbox"] + label{
-   position: relative;
+.nav-menu__theme-switch--btn input[type="checkbox"] + label {
    display:inline-block;
+
+   position: relative;
+   margin:0;
+
    width:100px;
    height:40px;
+
    border-radius: 20px;
-   margin:0;
+
    cursor: pointer;
-   background: var(--app-primary);
-   box-shadow: var(--input-toggle-shadow)
+
+   background: var(--app-orange);
+   box-shadow: inset 6px 6px 10px 0 rgb(0 0 0 / 20%);
 }
 
 
-.switch-toggle input[type="checkbox"] + label::before {
+.nav-menu__theme-switch--btn input[type="checkbox"] + label::before {
   position: absolute;
   content: url(/media/theme/light-mode.svg);
   padding: 2px;
@@ -442,10 +202,10 @@
 }
 
 
-.switch-toggle input[type="checkbox"]:checked + label::before {
+.nav-menu__theme-switch--btn input[type="checkbox"]:checked + label::before {
   left: 50%;
   content: url(/media/theme/dark-mode.svg);
-  color: var(--bg-color);
-  background-color: var(--bg-color);
+  color: var(--theme-color);
+  background-color: var(--theme-color);
   box-shadow: var(--btn-toggle-switch-shadow);
 }
