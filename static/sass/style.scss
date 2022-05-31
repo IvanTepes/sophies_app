@@ -1,17 +1,30 @@
-// Defined Colors
-@import "./theme/_colors";
+// Variables
+@import "./sass-utils/_variables";
 
-// Define Themes
+// Colors
 @import "./theme/_theme-colors";
 
-// Html,body
-@import "./base/_reset";
+// Vendors
+// @import "./vendors/_XXXXXXXXX";
+
+// Base
+@import "./base/_normalize.scss";
+
+// Navigation
+@import "./layout/_navigation";
+
+// App--Grid
+@import "./layout/_app-grid";
 
 // Logo
-@import "./base/_logo";
+@import "./components/_logo";
 
-// Grid
-@import "./layout/_site-menu";
+// Theme-toggle
+@import "./components/_theme-toggle";
 
-// Navbar
-@import "./layout/_nav";
+// Pages
+// @import "./pages/_XXXXXXXXXXX";
+
+
+
+
