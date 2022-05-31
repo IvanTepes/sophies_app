@@ -14,7 +14,7 @@
 
 // Check and set prefered theme and logo
 let logo = document.getElementById('js-logo');
-let checkbox = document.querySelector("input[name=js-nav-menu__theme-switch--checkbox]");
+let checkbox = document.querySelector("input[name=js-theme__toggle--input]");
 
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
   document.documentElement.setAttribute("data-theme", "dark");
