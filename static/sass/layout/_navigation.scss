@@ -1,0 +1,147 @@
+
+
+#nav-input:checked ~ .nav {
+  clip-path: circle(75%);
+  z-index: 1050;
+}
+
+
+#nav-input:checked ~ .nav-btn {
+  box-shadow: var(--nav__btn--pressed);
+  color: var(--color__secondary);
+}
+
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background: var(--color__theme);
+
+  -webkit-clip-path: circle(25px at calc(100% - 45px) 45px);
+  clip-path: circle(25px at calc(100% - 50%) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.nav-btn {
+  position: fixed;
+  z-index: 2000;
+
+  left: 50%;
+  bottom: -25px;
+  margin: 0 auto;
+
+  height: 50px;
+  width: 100px;
+
+  text-align: center;
+  line-height: 57px;
+  font-size: 30px;
+
+  color: var(--color__theme);
+
+  background: var(--nav__btn--bg);
+  box-shadow: var(--nav__btn--normal);
+
+  border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+
+.nav__menu {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+
+  width: 80%;
+  padding: 0;
+
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+
+.nav__item {
+  margin: 15px 0;
+
+  border-radius: 20px;
+
+  background: var(--color__theme);
+  box-shadow: var(--btn__shadow--drop);
+}
+
+
+.nav__item:hover {
+  box-shadow: inset 6px 6px 10px 0 rgb(0 0 0 / 20%);
+}
+
+
+.nav__item:first-child {
+  background: none;
+  box-shadow: none;
+}
+
+
+.nav__item--title {
+  position: relative;
+  padding: 5px 30px;
+
+  color: var(--color__title);
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+
+.nav__item--title:after {
+  position: absolute;
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%; /* if the font is 'Oswald'*/
+
+  content: "";
+
+  border-radius: 50px;
+
+  z-index: -1;
+
+  transform: scaleY(0);
+
+  transition: transform 0.2s ease;
+}
+
+
+.nav__item--title:hover:after {
+  transform: scaleY(1);
+}
+
+
+.nav__item--title:hover {
+  color: #fff;
+}
+
+
+input[type="checkbox"]{
+  display: none;
+}
+
+
+
