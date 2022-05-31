@@ -1,0 +1,22 @@
+
+
+html {
+    height: var(--base__height);
+    font-family: var(--base__font);
+}
+
+
+body {
+    height: 100vh;
+    background: var(--color__theme);
+    box-shadow: var(--body__shadow--inset);
+    padding: 1rem;
+}
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
