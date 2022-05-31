@@ -5,36 +5,30 @@
 
 html[data-theme="light"] {
 
-    --theme-color: #{$theme-color};
-
-    --color-white: #{$color-white};
-
-    --brand-primary: #{$brand-primary};
-    --brand-secondary:#{$brand-secondary};
-
-    --body-shadow: #{$body-shadow};
-
-    --btn-bg: #{$btn-bg};
-    --btn-shadow: #{$btn-shadow};
-
-    --title-color: #{$title-color};
-    --card-icon-shadow: #{$card-icon-shadow};
+    --color__theme: #{$color__theme};
 
 
+    --color__primary: #{$color__primary};
+    --color__secondary: #{$color__secondary};
 
-    --btn-toggle-switch-bg: #{$btn-toggle-switch-bg};
-    --btn-toggle-switch-shadow: #{$btn-toggle-switch-shadow};
 
-    --input-toggle-shadow: #{$input-toggle-shadow};
+    --color__text: #{$color__text};
+    --color__title: #{$color__title};
 
-    --menu-toggle-bg: #{$menu-toggle-bg};
-    --menu-toggle-shadow: #{$menu-toggle-shadow};
+    --body__shadow--inset: #{$body__shadow--inset};
 
-    --menu-item-text-shadow: #{$menu-item-text-shadow};
-    --menu-item-shadow: #{$menu-item-shadow};
-    --menu-item-hover-shadow: #{$menu-item-hover-shadow};
-    --menu-item-hover-text-shadow: #{$menu-item-hover-text-shadow};
-    --menu-item-hover-text-bg: #{$menu-item-hover-text-bg};
+    --nav__btn--bg: #{$nav__btn--bg};
+
+    --btn__shadow--drop: #{$btn__shadow--drop};
+
+
+    --nav__btn--bg: #{$nav__btn--bg};
+    --nav__btn--normal: #{$nav__btn--normal};
+    --nav__btn--pressed: #{$nav__btn--pressed};
+
+
+    --toggle__btn--drop-shadow: #{$toggle__btn--drop-shadow};
+
 }
 
 
@@ -43,34 +37,28 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
 
-    --color-white: #{$color-white-dark};
+    --color__theme: #{$color__theme--dark};
 
-    --brand-primary: #{$brand-primary};
-    --brand-secondary:#{$brand-secondary};
 
-    --text-color:#{$text-color-dark};
-    --text-shadow: #{$text-shadow-dark};
+    --color__primary: #{$color__primary};
+    --color__secondary: #{$color__secondary};
 
-    --bg-color: #{$bg-color-dark};
-    --bg-shadow: #{$bg-shadow-dark};
 
-    --border: #{$border-dark};
-    --border-color: #{$border-color-dark};
+    --color__text: #{$color__text};
+    --color__title: #{$color__title};
 
-    --bg-grid-card: #{$bg-grid-card-dark};
+    --body__shadow--inset: #{$body__shadow--inset};
 
-    --btn-toggle-switch-bg: #{$btn-toggle-switch-bg-dark};
-    --btn-toggle-switch-shadow: #{$btn-toggle-switch-shadow-dark};
+    --nav__btn--bg: #{$nav__btn--bg};
 
-    --input-toggle-shadow: #{$input-toggle-shadow-dark};
 
-    --menu-toggle-bg: #{$menu-toggle-bg-dark};
-    --menu-toggle-shadow: #{$menu-toggle-shadow-dark};
+    --btn__shadow--drop: #{$btn__shadow--drop};
 
-    --menu-item-text-shadow: #{$menu-item-text-shadow-dark};
-    --menu-item-shadow: #{$menu-item-shadow-dark};
 
-    --menu-item-hover-shadow: #{$menu-item-hover-shadow-dark};
-    --menu-item-hover-text-shadow: #{$menu-item-hover-text-shadow-dark};
-    --menu-item-hover-text-bg: #{$menu-item-hover-text-bg-dark};
+    --nav__btn--bg: #{$nav__btn--bg};
+    --nav__btn--normal: #{$nav__btn--normal};
+    --nav__btn--pressed: #{$nav__btn--pressed};
+
+    --toggle__btn--drop-shadow: #{$toggle__btn--drop-shadow--dark};
 }
+
