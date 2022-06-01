@@ -11,15 +11,16 @@ html[data-theme="light"] {
     --color__primary: #{$color__primary};
     --color__secondary: #{$color__secondary};
 
+    --text__primary-color: #{$text__primary-color};
 
     --color__text: #{$color__text};
     --color__title: #{$color__title};
 
-    --body__shadow--inset: #{$body__shadow--inset};
+    --body__inset-shadow: #{$body__inset-shadow};
 
     --nav__btn--bg: #{$nav__btn--bg};
 
-    --btn__shadow--drop: #{$btn__shadow--drop};
+    --btn__drop-shadow: #{$btn__drop-shadow};
 
 
     --nav__btn--bg: #{$nav__btn--bg};
@@ -43,22 +44,23 @@ html[data-theme="dark"] {
     --color__primary: #{$color__primary};
     --color__secondary: #{$color__secondary};
 
+    --text__primary-color: #{$text__primary-color--dark-theme};
 
     --color__text: #{$color__text};
     --color__title: #{$color__title};
 
-    --body__shadow--inset: #{$body__shadow--inset};
+    --body__inset-shadow: #{$body__inset-shadow--dark-theme};
 
     --nav__btn--bg: #{$nav__btn--bg};
 
-
-    --btn__shadow--drop: #{$btn__shadow--drop};
+    --btn__bg: #{$btn__bg--dark-theme};
+    --btn__drop-shadow: #{$btn__drop-shadow--dark-theme};
 
 
     --nav__btn--bg: #{$nav__btn--bg};
-    --nav__btn--normal: #{$nav__btn--normal};
+    --nav__btn--normal: #{$nav__btn--normal--dark-theme};
     --nav__btn--pressed: #{$nav__btn--pressed};
 
-    --toggle__btn--drop-shadow: #{$toggle__btn--drop-shadow--dark};
+    --toggle__btn--drop-shadow: #{$toggle__btn--drop-shadow--dark-theme};
 }
 
