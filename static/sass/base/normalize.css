@@ -9,7 +9,7 @@ html {
 body {
   min-height: 100vh;
   background: var(--color__theme);
-  box-shadow: var(--body__shadow--inset);
+  box-shadow: var(--body__inset-shadow);
   padding: 1rem;
 }
 

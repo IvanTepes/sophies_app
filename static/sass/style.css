@@ -2,11 +2,12 @@ html[data-theme=light] {
   --color__theme: #e6e7ee;
   --color__primary: #EF5244;
   --color__secondary: #032D48;
+  --text__primary-color: #FFFFFF;
   --color__text: #6b728d;
   --color__title: #6b728d;
-  --body__shadow--inset: inset rgba(104, 139, 255, 0.1) 0px 48px 100px 0px, inset rgba(17, 12, 46, 0.15) 0px 30px 100px 0px;
+  --body__inset-shadow: inset rgba(104, 139, 255, 0.1) 0px 48px 100px 0px, inset rgba(17, 12, 46, 0.15) 0px 30px 100px 0px;
   --nav__btn--bg: #EF5244;
-  --btn__shadow--drop: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgba(104, 139, 255, 0.1) 7px 3px 10px, rgba(0, 0, 0, 0.1) 7px 5px 10px;
+  --btn__drop-shadow: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgba(104, 139, 255, 0.1) 7px 3px 10px, rgba(0, 0, 0, 0.1) 7px 5px 10px;
   --nav__btn--bg: #EF5244;
   --nav__btn--normal: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.61) 0px 1px 8px 0px, rgba(239, 82, 68, 0) 0px 0px 10px 10px, rgba(239, 82, 68, 0.52) 0px -4px 20px 4px;
   --nav__btn--pressed: inset 0px 8px 8px 0px rgba(0, 0, 0, 0.61), inset 0px -3px 2px 0px rgba(0, 0, 0, 0.61);
@@ -14,16 +15,18 @@ html[data-theme=light] {
 }
 
 html[data-theme=dark] {
-  --color__theme: #12274a;
+  --color__theme: #1d1e1f;
   --color__primary: #EF5244;
   --color__secondary: #032D48;
+  --text__primary-color: #FFFFFF;
   --color__text: #6b728d;
   --color__title: #6b728d;
-  --body__shadow--inset: inset rgba(104, 139, 255, 0.1) 0px 48px 100px 0px, inset rgba(17, 12, 46, 0.15) 0px 30px 100px 0px;
+  --body__inset-shadow: inset rgba(52, 55, 65, 0) 0px 48px 100px 0px, inset rgb(17, 16, 16) 0px 0px 30px 0px;
   --nav__btn--bg: #EF5244;
-  --btn__shadow--drop: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgba(104, 139, 255, 0.1) 7px 3px 10px, rgba(0, 0, 0, 0.1) 7px 5px 10px;
+  --btn__bg: #242526;
+  --btn__drop-shadow: inset 2px 3px 5px 0 #414141, rgba(255, 255, 255, 0) 7px 3px 10px, rgba(0, 0, 0, 0.82) 4px 4px 20px;
   --nav__btn--bg: #EF5244;
-  --nav__btn--normal: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.61) 0px 1px 8px 0px, rgba(239, 82, 68, 0) 0px 0px 10px 10px, rgba(239, 82, 68, 0.52) 0px -4px 20px 4px;
+  --nav__btn--normal: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgb(239, 82, 68) 0px 0px 10px 0px, rgba(29, 30, 31, 0.86) 0px -2px 20px 20px, rgb(0, 0, 0) 0px -4px 20px 10px;
   --nav__btn--pressed: inset 0px 8px 8px 0px rgba(0, 0, 0, 0.61), inset 0px -3px 2px 0px rgba(0, 0, 0, 0.61);
   --toggle__btn--drop-shadow: inset 3px 2px 5px 0 rgba(255, 255, 255, 0.5), rgba(104, 139, 255, 0.1) 7px 3px 10px, rgba(239, 82, 68, 0.7) 4px 3px 9px;
 }
@@ -36,7 +39,7 @@ html {
 body {
   height: 100vh;
   background: var(--color__theme);
-  box-shadow: var(--body__shadow--inset);
+  box-shadow: var(--body__inset-shadow);
   padding: 1rem;
 }
 
@@ -50,8 +53,7 @@ body {
           clip-path: circle(75%);
   z-index: 1050;
 }
-
-#nav-input:checked ~ .nav-btn {
+#nav-input:checked ~ .nav__btn {
   box-shadow: var(--nav__btn--pressed);
   color: var(--color__secondary);
 }
@@ -67,13 +69,12 @@ body {
   clip-path: circle(25px at 50% 100%);
   transition: all 0.3s ease-in-out;
 }
-
-.nav-btn {
+.nav__btn {
   position: fixed;
   z-index: 2000;
+  margin: 0 auto;
   left: 50%;
   bottom: -25px;
-  margin: 0 auto;
   height: 50px;
   width: 100px;
   text-align: center;
@@ -84,37 +85,37 @@ body {
   box-shadow: var(--nav__btn--normal);
   border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
   transform: translate(-50%, -50%);
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
-
 .nav__menu {
   position: absolute;
   top: 45%;
   left: 50%;
   width: 80%;
   padding: 0;
-  transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
+  transform: translate(-50%, -50%);
 }
-
 .nav__item {
   margin: 15px 0;
   border-radius: 20px;
   background: var(--color__theme);
-  box-shadow: var(--btn__shadow--drop);
+  box-shadow: var(--btn__drop-shadow);
 }
-
 .nav__item:hover {
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
-
 .nav__item:first-child {
   background: none;
   box-shadow: none;
 }
 
+/* .nav__item:first-child {
+  background: none;
+  box-shadow: none;
+} */
 .nav__item--title {
   position: relative;
   padding: 5px 30px;
@@ -127,7 +128,9 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
+.nav__item--title:hover {
+  color: #fff;
+}
 .nav__item--title:after {
   position: absolute;
   width: 104%;
@@ -141,13 +144,8 @@ body {
   transform: scaleY(0);
   transition: transform 0.2s ease;
 }
-
 .nav__item--title:hover:after {
   transform: scaleY(1);
-}
-
-.nav__item--title:hover {
-  color: #fff;
 }
 
 input[type=checkbox] {
@@ -160,19 +158,17 @@ input[type=checkbox] {
   display: grid;
   grid-gap: 3rem;
 }
-
 .app-grid__item {
-  box-shadow: var(--btn__shadow--drop);
+  box-shadow: var(--btn__drop-shadow);
+  background-color: var(--btn__bg);
   border-radius: 20px;
   height: 5.5rem;
 }
-
 .app-grid__item--title {
-  color: var(--color__title);
+  color: var(--text__primary-color);
   font-weight: bold;
   letter-spacing: 0.5px;
 }
-
 .app-grid__item--image {
   height: 7vh;
   padding-top: 0.5rem;
@@ -207,16 +203,15 @@ input[type=checkbox] {
   justify-content: space-between;
   border-radius: 10px;
 }
-
 .theme__toggle--theme-name {
-  color: #6b728d;
   display: inline-block;
-  font-size: larger;
-  font-weight: 700;
-  padding: 5px 10px;
-  padding: 0;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding: 5px 10px;
+  padding: 0;
+  font-size: larger;
+  font-weight: 700;
+  color: #6b728d;
   transform: translate(0%, -50%);
 }
 
@@ -225,7 +220,6 @@ input[type=checkbox] {
   opacity: 0;
   z-index: -2;
 }
-
 .theme__toggle--btn input[type=checkbox] + label {
   display: inline-block;
   position: relative;
@@ -233,11 +227,10 @@ input[type=checkbox] {
   width: 100px;
   height: 40px;
   border-radius: 20px;
-  cursor: pointer;
   background: var(--app-orange);
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
-
 .theme__toggle--btn input[type=checkbox] + label::before {
   content: url(/media/theme/light-mode.svg);
   position: absolute;
@@ -247,14 +240,13 @@ input[type=checkbox] {
   height: 28px;
   padding: 2px;
   border-radius: 22px;
-  background: var(--color__primary);
-  box-shadow: var(--toggle__btn--drop-shadow);
   font-size: 13px;
   text-align: center;
   line-height: 25px;
+  background: var(--color__primary);
+  box-shadow: var(--toggle__btn--drop-shadow);
   transition: 0.3s ease-in-out;
 }
-
 .theme__toggle--btn input[type=checkbox]:checked + label::before {
   content: url(/media/theme/dark-mode.svg);
   left: 50%;
