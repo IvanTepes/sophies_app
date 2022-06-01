@@ -9,7 +9,7 @@ $base__height: 100%;
 $base__font: 'Roboto', sans-serif;
 
 $base__background: var(--color__theme);
-$base__shadow: var(--body__shadow--inset);
+$base__shadow: var(--body__inset-shadow);
 
 
 
@@ -35,12 +35,13 @@ $color__secondary: #032D48;
 $color__text:      #6b728d;
 $color__title:     #6b728d;
 
+$text__primary-color: #FFFFFF;
 
-$body__shadow--inset: inset rgb(104 139 255 / 10%) 0px 48px 100px 0px,
+$body__inset-shadow: inset rgb(104 139 255 / 10%) 0px 48px 100px 0px,
               inset rgb(17 12 46 / 15%) 0px 30px 100px 0px;
 
 
-$btn__shadow--drop: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
+$btn__drop-shadow: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
                                         rgb(104 139 255 / 10%) 7px 3px 10px,
                                         rgb(0 0 0 / 10%) 7px 5px 10px;
 
@@ -64,7 +65,7 @@ $toggle__btn--drop-shadow: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
 
 
 
-$color__theme--dark: #12274a;
+$color__theme--dark: #1d1e1f;
 
 
 $color__primary:     #EF5244;
@@ -74,29 +75,29 @@ $color__secondary:   #032D48;
 $color__text:        #6b728d;
 $color__title:       #6b728d;
 
+$text__primary-color--dark-theme: #FFFFFF;
 
-$body__shadow--inset: inset rgb(104 139 255 / 10%) 0px 48px 100px 0px,
-              inset rgb(17 12 46 / 15%) 0px 30px 100px 0px;
+$body__inset-shadow--dark-theme: inset rgb(52 55 65 / 0%) 0px 48px 100px 0px, inset rgb(17 16 16) 0px 0px 30px 0px;
 
 
-
-$btn__shadow--drop: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
-                                        rgb(104 139 255 / 10%) 7px 3px 10px,
-                                        rgb(0 0 0 / 10%) 7px 5px 10px;
+$btn__bg--dark-theme: #242526;
+$btn__drop-shadow--dark-theme: inset 2px 3px 5px 0 #414141, rgb(255 255 255 / 0%) 7px 3px 10px, rgb(0 0 0 / 82%) 4px 4px 20px;
 
 
 $nav__btn--bg: #EF5244;
 
-$nav__btn--normal: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
+$nav__btn--normal--dark-theme: /* inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
                                        rgb(0 0 0 / 61%) 0px 1px 8px 0px,
                                        rgb(239 82 68 / 0%) 0px 0px 10px 10px,
-                                       rgb(239 82 68 / 52%) 0px -4px 20px 4px;
+                                       rgb(239 82 68 / 52%) 0px -4px 20px 4px; */
+
+                                       inset 3px 2px 5px 0 rgb(255 255 255 / 50%), rgb(239 82 68) 0px 0px 10px 0px, rgb(29 30 31 / 86%) 0px -2px 20px 20px, rgb(0 0 0) 0px -4px 20px 10px;
 
 $nav__btn--pressed: inset 0px 8px 8px 0px rgb(0 0 0 / 61%),
                     inset 0px -3px 2px 0px rgb(0 0 0 / 61%);
 
 
-$toggle__btn--drop-shadow--dark: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
+$toggle__btn--drop-shadow--dark-theme: inset 3px 2px 5px 0 rgb(255 255 255 / 50%),
                                                rgb(104 139 255 / 10%) 7px 3px 10px,
                                                rgb(239 82 68 / 70%) 4px 3px 9px;
 
